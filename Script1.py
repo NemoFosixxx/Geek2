@@ -4,7 +4,7 @@ def print_numbers(m, n):
     print(m)
     print_numbers(m + 1, n)
 
-M = 5
-N = 10
+m = 5
+n = 10
 
-print_numbers(M, N)
+print_numbers(m, n)
