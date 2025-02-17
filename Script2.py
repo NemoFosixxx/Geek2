@@ -1,10 +1,13 @@
-def print_numbers(m, n):
-    if m > n:
-        return
-    print(m)
-    print_numbers(m + 1, n)
+def ackermann(m, n):
+    if m == 0:
+        return n + 1
+    elif m > 0 and n == 0:
+        return ackermann(m - 1, 1)
+    elif m > 0 and n > 0:
+        return ackermann(m - 1, ackermann(m, n - 1))
 
-m = 5
-n = 10
+m = 2
+n = 3
 
-print_numbers(m, n)
+result = ackermann(m, n)
+print(f"A({m}, {n}) = {result}")
